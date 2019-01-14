@@ -1,0 +1,8 @@
+- name: Install DNS and DHCP
+  hosts: dns
+  yum: name={{ item }} state=present
+  with_items:
+   - bind
+   - bind-common
+   - dhcp
+
